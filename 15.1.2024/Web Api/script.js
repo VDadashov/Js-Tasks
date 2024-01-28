@@ -25,7 +25,12 @@ function salam(){
 
 
 
-setInterval(() => {
+let time = setInterval(() => {
     let time = new Date().toLocaleTimeString();
     document.querySelector("h1").innerHTML = time;
 }, 1000);
+
+
+document.querySelector("button").addEventListener("click",()=>{
+    clearInterval(time);
+})
